@@ -1,9 +1,9 @@
 {
-  "name": "lezer-javascript",
+  "name": "scopes-parser",
   "version": "0.7.0",
-  "description": "lezer-based JavaScript grammar",
+  "description": "lezer-based Scopes grammar",
   "main": "dist/index.js",
-  "author": "Marijn Haverbeke <marijnh@gmail.com>",
+  "author": "Kelley van Evert <hello@klve.nl>",
   "license": "MIT",
   "devDependencies": {
     "lezer-generator": "^0.7.1",
@@ -14,13 +14,9 @@
   "dependencies": {
     "lezer": "^0.7.0"
   },
-  "repository": {
-    "type" : "git",
-    "url" : "https://github.com/lezer-parser/javascript.git"
-  },
   "scripts": {
-    "build": "lezer-generator src/javascript.grammar -o src/parser && rollup -c",
-    "build-debug": "lezer-generator src/javascript.grammar --names -o src/parser && rollup -c",
+    "build": "lezer-generator src/scopes.grammar -o src/parser && rollup -c",
+    "build-debug": "lezer-generator src/scopes.grammar --names -o src/parser && rollup -c",
     "prepare": "npm run build",
     "test": "mocha test/test-*.js"
   }
